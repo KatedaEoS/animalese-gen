@@ -94,20 +94,19 @@ class PinYinSlicer(KanaSlicer):
 
         input = input.replace("zh", "z")
         input = input.replace("q", "ch")
-        input = input.replace("x", "sh")
+        input = input.replace("x", "s")
+        input = input.replace("sh", "s")
 
         input = input.replace("jiu", "jo")
-        input = input.replace("ji", "ja")
+        input = input.replace("jia", "ja")
+        input = input.replace("ji", "je")
 
-        input = input.replace("ian", "ie")
-        input = input.replace("iang", "ian")
-        input = input.replace("uang", "wan")
-        input = input.replace("uan", "wan")
-        input = input.replace("ua", "wa")
         input = input.replace("uo", "o")
 
         input = input.replace("yi", "i")
         input = input.replace("wu", "u")
+
+        print(input)
 
         token_list = re.findall("[a-zA-Z,]+", input)
         result = ""
